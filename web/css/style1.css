@@ -1,0 +1,178 @@
+body{
+    
+    font-family: "PT sans",Arial, Calibri;
+    font-size: 1.1em;
+}
+h1{
+    color:#5d5d5d;
+    font-size: 1.8em;
+    text-align: center;
+}
+.post{
+    margin: 30px 0;
+    color: #C2C2C2;
+    text-align: center;
+    padding: 10px 105px; 
+}
+
+
+input{
+    outline: none;
+}
+#addfoto{
+    color: #fff;
+    font-size: 20px;
+    padding: 13px;
+    background: #98CE1E;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    
+}
+input#addfoto:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.conteiner1{
+    
+    margin: 20px 70px 150px 300px;
+    width: 570px;
+    height: 500px;
+    background: #F8F8F8;
+    float: left;
+}
+
+#foto{
+    display: block;
+    text-align: center;
+    padding-top: 120px;
+    
+}
+
+#foto{
+    display: block;
+    margin: auto;
+    width: 230px;
+    height: 170px;
+}
+.user{
+    padding: 10px;
+}
+
+.avat{
+    margin: 10px 10px 0 0;    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    float: left;
+}
+.discription{
+    margin: 35px 940px;
+    width: 300px;
+    height: 200px;
+    background: #F8F8F8;
+}
+#publish{
+    color: #fff;
+    font-size: 18px;
+    padding: 12px;
+    background: #969696;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    
+}
+#publish:hover{
+    cursor: pointer;
+    box-shadow:0px 0px 3px 4px rgba(0,0,0,0.3);
+        
+}
+
+.contact{
+    margin: 0 135px;
+    font-family: Calibri;
+    height: 130px;
+    text-align: center;
+}
+.title{
+    color:#5d5d5d;
+    width: 300px;
+    float:left;
+}   
+.networks{
+    margin-bottom: 0;
+}
+.socialnet{
+    text-decoration: none;
+    color: #000;
+    margin-right: 5px;
+}
+span{
+    font-size: 1.3em;
+}
+.map{
+     text-align: center;
+}
+#map{
+   margin-bottom: 50px;
+    width: 630px;
+    height: 360px;
+}
+
+.windregistre{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    background: #ccc;
+    height: 480px;
+    border-radius: 5px;
+    margin: 100px 600px 500px;
+}
+form input.yemail{
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background: #bbb;
+    font-size: 16px;
+    width: 225px;
+    margin: 10px 0 0;
+}
+form input#create{
+    width: 255px;
+    background: #98CE1E;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+a.already{
+    text-align: center;
+    font-size: 14px;
+    color:#444;
+    text-decoration: none;
+}
+p.reg{
+    padding: 15px 0 0;
+    margin: 0;
+}
+.windenter{
+    
+   display: inline-block;
+    text-align: center;
+    width: 300px;
+    background: #ccc;
+    height: 250px;
+    border-radius: 5px;
+    margin: 100px 600px 500px;
+}
+
+.addimg{
+    width: 300px;
+    height: 300px;
+    background: #ccc;
+}
