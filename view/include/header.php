@@ -5,8 +5,8 @@
         <title>Skilogram</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/../app/web/css/main2.css" type="text/css">
-        <link rel="stylesheet" href="/../app/web/css/style1.css" type="text/css">
+        <link rel="stylesheet" href="css/main2.css" type="text/css">
+        <link rel="stylesheet" href="css/style1.css" type="text/css">
     </head>
     <body>
         <header>           

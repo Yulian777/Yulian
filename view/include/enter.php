@@ -3,18 +3,19 @@ require 'header.php';
 require __DIR__ . '/../../common/db.php';
 require_once __DIR__ . '/../../common/functions.php';
 
-if(empty($_POST['login']) || empty($_POST['password'])){
+if (empty($_POST['login']) || empty($_POST['password'])) {
    er($datat);
     }
 
-if(isset($_POST['enter'])){
-    $stmt = $dbh ->prepare('SELECT id, login, password FROM users WHERE login = ?');
-    $stmt->execute([$_POST['login']]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+if (isset($_POST['enter'])) {
+    $stmt = $dbh -> prepare('SELECT id, login, password FROM users WHERE login = ?');
+    $stmt -> execute([$_POST['login']]);
+    $user = $stmt -> fetch(PDO::FETCH_ASSOC);
 
-if($user && $user['password'] === md5($_POST['password'])){
+if ($user && $user['password'] === md5($_POST['password'])) {
         $_SESSION['user_id'] = $user['id']; 
-    }else{ echo 'Логин или пароль введен неверно.';
+    } else {
+        echo 'Логин или пароль введен неверно.';
     }
   
 }

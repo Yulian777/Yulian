@@ -1,39 +1,35 @@
 <?php
 
-function addMessage($text){
+function addMessage($text) {
     $_SESSION['message'] = $text;
 }
-function getMessenge(){
+
+function getMessage() {
     $text = $_SESSION['message'];
     unset($_SESSION['message']);
-    return 'Вход в приложение';
+    return $text;
 }
 
-function getView($name){
-    if($name && file_exists(VIEW_PATH . $name.'.php')) {
+function getView($name) {
+    if ($name && file_exists(VIEW_PATH . $name.'.php')) {
     return $name;
- }else{ 
+ } else { 
     return '404';
  
- }
+    }
 }
 
-function render($path, $data =[]){
+function render($path, $data = []) {
     extract($data);
     ob_start();
-    require $path;
+    require VIEW_PATH . $path . '.php';
     return ob_get_clean();
 }
 
+function t($a) {
 
-function dbconnect($db){
-    $dsn = 'mysql:dbname=skillogram;host=127.0.0.1';
-$user = 'root';
-$password = '';
-
-$dbh = new PDO($dsn, $user, $password);
+    echo "<pre>";
+    print_r($a);
+    echo "<pre>";
 }
- function er($datat){
-   $_SESSION['errors'] ='Заполните все поля';
-   echo $_SESSION['errors'];
- }
+

@@ -1,37 +1,40 @@
 <?php 
  
-    require 'header.php';
-    require_once __DIR__ . '/../../common/functions.php';
-//    require __DIR__ . '/../../common/db.php'; 
+require_once __DIR__ . '/../../common/functions.php';
+
 dbconnect($db);
-    
-if(isset($_POST['add'])){
-        //регистрируем
-        $errors =array();
-    if (empty($_POST['login']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['password2']) ){
-             $errors[] = 'Заполните все поля';
-    } 
-    if($_POST['password'] != $_POST['password2']){
-        $errors[]='Повторный пароль введён не верно';
-    
+
+if (isset($_POST['add'])) {
+    // Регистрируем
+    $errors = [];
+    if (empty($_POST['login']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['password2'])) {
+        $errors[] = 'Заполните все поля';
     }
-    if(empty($errors)){
+    
+    if ($_POST['password'] != $_POST['password2']) {
+        $errors[] = 'Повторный пароль введён не верно';
+    }
+    
+    if (empty($errors)) {
         $salt = 'jd4H2D4eql98tunx65n7ZjK';
-    if(isset($_POST['login']) && isset($_POST['password']) == isset($_POST['password2'])){
-            if(isset($_POST['add'])){
-            $stmt = $dbh->prepare('INSERT INTO users (login, password, email) VALUES (:login, :password, :email)');
-            $stmt ->execute([
-                ':login'=>$_POST['login'],
-                ':password'=>md5($_POST['password'].$salt),
-                    ]);
-                }
-                
-            }
-    }else{
-        echo '<div style="color: red;">'. array_shift($errors).'</div>'.'<hr>';
+        
+        $stmt = $dbh -> prepare('INSERT INTO users (login, password, email) VALUES (:login, :password, :email)');
+        $stmt -> execute([
+            ':login' => $_POST['login'],
+            ':password' => md5($_POST['password'] . $salt),
+            ':name' => $_POST['email'],
+        ]);
+
+        header('Location: ./');
+        exit;
+    } else {
+        foreach ($errors as $error) {
+            echo '<div style="color: red;">' . $error . '</div>'.'<hr>';
+        }
     }
-    
 }
+
+require 'header.php';
 
 var_dump($_GET);
 ?>
@@ -61,9 +64,3 @@ var_dump($_GET);
 </section>
 
 <?php require 'footer.php';
-
-$login = $_POST['email'];
-$password = $_POST['password'];
-$password2 = $_POST['password2'];
-
-
