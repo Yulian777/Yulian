@@ -12,17 +12,17 @@
         <header>           
             <div class="main-head">
                 <div class="logo">
-                    <a href="index.php"><image src="image/logo.png" alt="image" id="logo"/></a>
+                    <a href=""><image src="image/logo.png" alt="image" id="logo"/></a>
                 </div>
                 <div class="head">
                 <div id="search-img">
                     <image src="image/search.png" alt="image"/>
                 </div>  
-                    <form action="enter.php" method="get" class="form">
+                    <form action="?controller=User&action=ent" method="post" class="form">
                         <input type="text" name="text" id="search">
                         <input type="submit" name="enter" value="Вход" id="input1">
                     </form>    
-                    <form action="registr.php" method="get" class="form">
+                    <form action="?controller=User&action=reg" method="post" class="form">
                         <input type="submit" name="auth" value="Регистрация" id="registry">
                     </form>
                 </div>

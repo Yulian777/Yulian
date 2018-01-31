@@ -9,27 +9,27 @@ class DefaultController {
 
     public function  categoriesAction()
     {
-         $data['categories'] = [
-             [
-                 'id' => 1,
-                 'name' => 'text1',
-             ],
-             [
-                 'id' => 2,
-                 'name' => 'Одежда',
-             ],
-         ];
-         $data['categoriesCount'] = 18;
+        $data['categories'] = [
+            [
+                'id' => 1,
+                'name' => 'text1',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Одежда',
+            ],
+        ];
+        $data['categoriesCount'] = 18;
         return render('categories', $data);
     }
 
     public function postsAction()
     {
 
-        $stmt = DB::getInstance()->getPdo()->prepare('SELECT * FROM posts');
+        $stmt = DB::getInstance()->getPdo()->prepare('SELECT * FROM post');
         $stmt->execute();
         $data['posts'] = $stmt->fetchAll();
-        return render('posts', $data);
+        return render('posts/list', $data);
     }
 
     public function postAction()

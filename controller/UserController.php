@@ -6,6 +6,11 @@ class UserController {
     {
         return render('user/reg');
     }
+    
+    public function entAction()
+    {
+        return render('user/form');
+    }
 
     public function regDataAction()
     {
@@ -15,6 +20,7 @@ class UserController {
         $user->login = $_POST['login'];
         $user->setPassword($_POST['password']);
         User::add($user);
+        return render('user/form');
     }
 
     public function indexAction()

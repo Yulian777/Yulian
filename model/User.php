@@ -69,9 +69,4 @@ class User
         }
         return null;
     }
-
-    public function asd()
-    {
-
-    }
 }

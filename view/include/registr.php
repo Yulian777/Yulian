@@ -47,7 +47,7 @@ var_dump($_GET);
             <input type="text" name="login" placeholder="Придумайте логин" value="<?php echo @$_POST['login'] ?>" class="yemail">
         </p>
         <p>
-            <input type="email" name="email" placeholder="Ваш email" value="<?php echo @$_POST['email'] ?>" class="yemail">
+            <input type="text" name="name" placeholder="Ваш email" value="<?php echo @$_POST['email'] ?>" class="yemail">
         </p>
         <p>
             <input type="password" name="password" placeholder="Придумайте пароль" class="yemail" value="<?php echo @$_POST['passsword'] ?>">
